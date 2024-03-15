@@ -1,0 +1,7 @@
+<p>first-task with ng-module works!</p>
+<div *ngFor="let item of items">
+    {{ item }}
+  </div>
+  
+  <input #newItemInput placeholder="New Item">
+  <button (click)="addItem(newItemInput.value)">Add Item</button>
