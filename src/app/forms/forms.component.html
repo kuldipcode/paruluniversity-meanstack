@@ -1,6 +1,17 @@
 <p>Template driven form forms works!</p>
-<form #myForm="ngForm" (ngSubmit)="onClickSubmit(myForm.value)">
+<form #myForm="ngForm" (ngSubmit)="onTemplateClickSubmit(myForm.value)">
     <input type="text" name="username" ngModel required>
     <input type="password" name="password" ngModel required>
     <button type="submit" [disabled]="!myForm.valid">Submit</button>
   </form>
+  <p>Reactive form forms works!</p>
+  <div> 
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" > 
+       <input type= "text"  name="userName" placeholder="userName" 
+          formControlName = "userName"> 
+       <br/>
+       <br/>
+       <input type="submit"  value="Click here"> 
+    </form>
+ </div> 
+ <p> Textbox result is: {{userName}} </p>
