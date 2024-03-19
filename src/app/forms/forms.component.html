@@ -1,7 +1,7 @@
 <p>Template driven form forms works!</p>
 <form #myForm="ngForm" (ngSubmit)="onTemplateClickSubmit(myForm.value)">
     <input type="text" name="username" ngModel required>
-    <input type="password" name="password" ngModel required>
+    <input type="password" name="password" minlength="8" maxlength="20" ngModel required>
     <button type="submit" [disabled]="!myForm.valid">Submit</button>
   </form>
   <p>Reactive form forms works!</p>
