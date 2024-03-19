@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstTaskComponent } from './first-task/first-task.component';
 import { FormsComponent } from './forms/forms.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstTaskComponent,
-    FormsComponent
+    FormsComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
